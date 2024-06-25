@@ -1,0 +1,223 @@
+
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.title span{
+    margin-top: 20px;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.swiper:hover .swiper-button-next{
+    display: block;
+    opacity: 1;
+    transition: all 1s linear;
+}
+.swiper:hover .swiper-button-prev{
+    display: block;
+    opacity: 1;
+    transition: all 1s linear;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 700px;
+    position: relative;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+.swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+}
+.swiper-button-next{
+    color: #1153b2;
+    font-weight: bold;
+    opacity: 0;
+}
+.swiper-button-prev{
+    color: #1153b2;
+    font-weight: bold;
+    opacity: 0;
+}
+.swiper_title{
+    position: absolute;
+    bottom: 0;
+    color: #eeeeee;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 10px;
+    -webkit-box-shadow: inset -17px -200px 183px -150px rgba(0,0,0,0.33);
+    -moz-box-shadow: inset -17px -200px 183px -150px rgba(0,0,0,0.33);
+    box-shadow: inset -17px -200px 183px -150px rgba(0,0,0,0.33);
+    height: 75px;
+    overflow: hidden;
+    transition: all .3s linear;
+
+}
+.swiper-slide:hover .swiper_title{
+    height: 130px;
+    -webkit-box-shadow: inset -17px -200px 75px 200px rgba(0,0,0,0.33);
+
+
+}
+
+.swiper_title button{
+    background:none;
+    color: white;
+    border: 3px solid white;
+
+    font-size: 20px;
+    border-radius: 40px;
+    padding: 5px 15px 5px 15px;
+    cursor: pointer;
+}
+.swiper_title button:hover{
+    background: white;
+    color: black;
+}
+
+.swiper_title p{
+    margin: 10px;
+}
+.navigation_block {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.navigation_block button{
+    font-size: 12px;
+}
+
+.swiper-custom-button {
+    flex: 1;
+    font-size: 20px;
+    margin: 10px;
+}
+
+@media (max-width: 400px) {
+    .swiper-custom-button {
+        flex: 0 0 48%; /* Немного меньше 50% для учета отступов */
+        box-sizing: border-box;
+    }
+
+    .swiper-custom-button.last {
+        flex: 0 0 100%;
+        text-align: center;
+        margin: 10px auto 0; /* Центрирование последней кнопки */
+    }
+}
+.navigation_block a:hover{
+    text-decoration: underline;
+    text-decoration-style: double;
+}
+.swiper-custom-button.active{
+    text-decoration: underline;
+    font-weight: 700;
+    color: darkslateblue;
+}
+
+
+.hide{
+    display: none;
+}
+
+
+.swiper-slide.swiper-slide-prev{
+    transition-duration: 0ms;
+    transform: translate3d(0px, 0px, -100px) rotateX(0deg) rotateY(50deg) scale(1);
+    z-index: 0;
+}
+.swiper-slide.swiper-slide-next{
+    transition-duration: 0ms;
+    transform: translate3d(0px, 0px, -100px) rotateX(0deg) rotateY(-50deg) scale(1);
+    z-index: 0;
+}
+.title{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.swiper-custom-button{
+    background-color: transparent;
+    border: none;
+    color: #1153b2;
+    font-size: 15px;
+    font-weight: 600;
+    cursor:pointer;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+.swiper-custom-button:active{
+    color: darkslateblue;
+}
+@media (max-width:1124px) {
+    .swiper-slide {
+        width: 500px;
+
+    }
+}
+@media (max-width:800px) {
+    .swiper-slide {
+        width: 400px;
+
+    }
+
+}
+
+@media (max-width:480px) {
+    .swiper-slide {
+        width: 100%;
+
+    }
+    .swiper_title{
+        font-size: 12px;
+        height: 50px;
+    }
+    .swiper-container{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .swiper_title button{
+        font-size: 12px;
+    }
+
+    .swiper-slide:hover .swiper_title{
+        height: 90px;
+        -webkit-box-shadow: inset -17px -200px 75px 200px rgba(0,0,0,0.33);
+
+
+    }
+    .swiper:hover .swiper-button-next{
+        display: none;
+    }
+    .swiper:hover .swiper-button-prev{
+        display: none;
+    }
+
+}
+
